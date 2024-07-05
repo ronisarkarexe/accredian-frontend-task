@@ -30,7 +30,7 @@ const HeroComponent = () => {
             <span className="font-bold text-blue-600">Rs. 15,000</span>
           </p>
 
-          <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-sm shadow-lg hover:bg-blue-700">
+          <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700">
             Refer Now
           </button>
         </div>
