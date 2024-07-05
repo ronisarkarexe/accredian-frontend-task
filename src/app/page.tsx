@@ -1,3 +1,4 @@
+import FooterComponent from "@/components/footer.component";
 import GetInTouchComponent from "@/components/get.in.touch.component";
 import HeaderComponent from "@/components/header";
 import HeroComponent from "@/components/hero.component";
@@ -16,6 +17,7 @@ export default function Home() {
       <ReferralComponent />
       <QuestionComponent />
       <GetInTouchComponent />
+      <FooterComponent />
     </div>
   );
 }
