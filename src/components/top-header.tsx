@@ -3,7 +3,7 @@ import React from "react";
 const TopHeader = () => {
   return (
     <div className="bg-blue-100 py-3">
-      <h1 className="text-center">
+      <h1 className="text-center text-xs md:text-sm">
         Navigate your ideal career path with tailored expert advice
         <span className="text-blue-600 ml-3">Contact expert</span>
       </h1>

@@ -9,11 +9,13 @@ import TopHeader from "@/components/top-header";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ maxWidth: "1332px" }}>
       <TopHeader />
       <HeaderComponent />
       <HeroComponent />
-      <ReferComponent />
+      <div className="hidden lg:block">
+        <ReferComponent />
+      </div>
       <ReferralComponent />
       <QuestionComponent />
       <GetInTouchComponent />

@@ -12,7 +12,7 @@ const FooterComponent = () => {
   return (
     <div style={{ backgroundColor: "#282828" }}>
       <div style={{ maxWidth: "1200px" }} className="mx-auto py-12">
-        <div className="flex items-start justify-between">
+        <div className="flex flex-col lg:flex-row items-center md:items-start justify-center md:justify-between">
           <div className="">
             <Image src={logo} width={80} height={80} alt="logo" />
           </div>
@@ -29,8 +29,8 @@ const FooterComponent = () => {
         </div>
         <hr />
 
-        <div className="grid grid-cols-12 gap-4 mt-4 text-white">
-          <div className="col-span-3 ">
+        <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 mt-4 text-white px-5 md:px-0">
+          <div className="col-span-1 md:col-span-2 lg:col-span-3">
             <div className="flow-root">
               <div>
                 <h1 className="text-xl mb-4">Programs</h1>
@@ -173,7 +173,7 @@ const FooterComponent = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-5 px-2">
+          <div className="col-span-1 md:col-span-3 lg:col-span-5 px-0 md:px-2">
             <h1 className="text-xl">Contact Us</h1>
             <span className="text-xs text-gray-200">
               Email us (For Data Science Queries): admissions@accredian.com
@@ -208,7 +208,7 @@ const FooterComponent = () => {
               <Image src={link5} width={21} height={21} alt="link1" />
             </div>
           </div>
-          <div className="col-span-4 px-2">
+          <div className="col-span-1 md:col-span-1 lg:col-span-4 px-0 md:px-2">
             <h1 className="text-xl">Accredian</h1>
             <span className="text-sm text-gray-200">About</span> <br />
             <span className="text-sm text-gray-200">Career</span> <br />
@@ -223,7 +223,7 @@ const FooterComponent = () => {
             <span className="text-sm text-gray-200">Master FAQs</span>
           </div>
         </div>
-        <span className="text-xs text-gray-200 mt-10 flex items-center justify-center">
+        <span className="text-xs text-gray-200 mt-10 flex items-center justify-center px-5 md:px-0 text-center">
           © 2024 Accredian A Brand of FullStack Education Pvt Ltd. All Rights
           Reserved
         </span>

@@ -83,7 +83,7 @@ const ReferralComponent = () => {
       </h1>
 
       <div className="max-w-5xl mx-auto my-10">
-        <div className="flex items-center justify-end my-1">
+        <div className="flex items-center justify-end my-1 px-5 md:px-0">
           <span className="mr-3 text-sm">Enrolled</span>
           <input
             type="checkbox"
@@ -91,8 +91,8 @@ const ReferralComponent = () => {
             defaultChecked
           />
         </div>
-        <div className="flex">
-          <div style={{ minWidth: "300px" }}>
+        <div className="flex flex-col lg:flex-row">
+          <div className="min-w-[300px] w-full lg:w-auto px-5 md:px-0">
             <div className="w-full shadow-2xl rounded-lg">
               <ul>
                 {allEvents.map((event, index) => (
@@ -115,18 +115,18 @@ const ReferralComponent = () => {
               </ul>
             </div>
           </div>
-          <div className="flex-1 px-4 ml-5">
-            <div style={{ minWidth: "700px" }}>
-              <table className="border-collapse shadow-xl rounded-b-lg rounded-t-lg">
+          <div className="flex-1 px-4 mt-5 lg:mt-0 lg:ml-5 pl-4 md:pl-0">
+            <div className="min-w-[300px] md:min-w-[500px] lg:min-w-[700px]">
+              <table className="border-collapse shadow-xl rounded-b-lg rounded-t-lg w-full">
                 <thead>
                   <tr className="border-none bg-blue-200 text-blue-600">
-                    <th className="border-x-0 py-2 px-4 text-left w-1/2">
+                    <th className="border-x-0 py-2 px-2 md:px-4 text-left w-1/2">
                       Programs
                     </th>
-                    <th className="border-x py-2 px-4 text-left w-1/5">
+                    <th className="border-x py-2 px-2 md:px-4 text-left w-1/5">
                       Referrer Bonus
                     </th>
-                    <th className="border-x-0 py-2 px-4 text-left w-1/5">
+                    <th className="border-x-0 py-2 px-2 md:px-4 text-left w-1/5">
                       Referee Bonus
                     </th>
                   </tr>
@@ -134,14 +134,14 @@ const ReferralComponent = () => {
                 <tbody>
                   {programs.map((program, index) => (
                     <tr key={index}>
-                      <td className="border-x-0 py-2 px-4 flex items-start justify-start">
+                      <td className="border-x-0 py-2 px-2 md:px-4 flex items-start justify-start">
                         <Image src={group} width={30} height={30} alt="group" />
                         <span className="ml-2">{program.name}</span>
                       </td>
-                      <td className="border-x py-2 px-4 text-center">
+                      <td className="border-x py-2 px-2 md:px-4 text-center">
                         {program.referrer}
                       </td>
-                      <td className="border-x-0 py-2 px-4 text-center">
+                      <td className="border-x-0 py-2 px-2 md:px-4 text-center">
                         {program.referee}
                       </td>
                     </tr>

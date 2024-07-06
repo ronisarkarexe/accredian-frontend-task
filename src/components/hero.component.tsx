@@ -16,9 +16,9 @@ const HeroComponent = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div>
+    <div className="px-5 md:px-0">
       <div className="flex items-center justify-center mt-5">
-        <div className="w-320 h-10 bg-blue-100 rounded-3xl flex items-center justify-center px-10 gap-20">
+        <div className="w-220 md:w-320 h-10 bg-blue-100 rounded-3xl flex items-center justify-center px-3 md:px-10 gap-4 md:gap-20 text-xs md:text-sm">
           <span className="text-blue-700">Refer</span>
           <span>Benefits</span>
           <span>FAQs</span>
@@ -53,7 +53,7 @@ const HeroComponent = () => {
             className="w-full h-auto rounded-lg z-40"
           />
         </div>
-        <div className="absolute bottom-5 left-[675px] transform -translate-x-1/2 -translate-y-1/2 z-50">
+        <div className="absolute bottom-[-19px] md:bottom-5 left-[40px] md:left-[675px] transform -translate-x-1/2 -translate-y-1/2 z-50">
           <Image src={money1} alt="Money" width={80} height={80} />
         </div>
         <div className="absolute top-[54px] right-[278px] transform -translate-x-1/2 -translate-y-1/2 z-20">
@@ -62,7 +62,7 @@ const HeroComponent = () => {
         <div className="absolute top-62 right-[53px] transform translate-x-1/2 -translate-y-1/2 z-10">
           <Image src={money3} alt="Money" width={80} height={80} />
         </div>
-        <div className="absolute top-5 left-12 transform -translate-x-1/2 -translate-y-[20px]">
+        <div className="absolute top-5 left-11 md:left-12 transform -translate-x-1/2 -translate-y-[20px]">
           <Image src={money4} alt="Money" width={80} height={80} />
         </div>
         <div className="absolute top-6 right-0 transform -translate-x-1/2 -translate-y-[23px]">
