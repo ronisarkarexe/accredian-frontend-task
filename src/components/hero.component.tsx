@@ -56,16 +56,16 @@ const HeroComponent = () => {
         <div className="absolute bottom-[-19px] md:bottom-5 left-[40px] md:left-[675px] transform -translate-x-1/2 -translate-y-1/2 z-50">
           <Image src={money1} alt="Money" width={80} height={80} />
         </div>
-        <div className="absolute top-[54px] right-[278px] transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="absolute top-[370px] md:top-[54px] right-[100px] md:right-[278px] transform -translate-x-1/2 md:-translate-x-1/2 -translate-y-1/2 z-20">
           <Image src={money2} alt="Money" width={80} height={80} />
         </div>
-        <div className="absolute top-62 right-[53px] transform translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="absolute top-[450px] md:top-[270px] right-[22px] md:right-[53px] transform translate-x-1/3 md:translate-x-1/2 -translate-y-1/2 z-10">
           <Image src={money3} alt="Money" width={80} height={80} />
         </div>
         <div className="absolute top-5 left-11 md:left-12 transform -translate-x-1/2 -translate-y-[20px]">
           <Image src={money4} alt="Money" width={80} height={80} />
         </div>
-        <div className="absolute top-6 right-0 transform -translate-x-1/2 -translate-y-[23px]">
+        <div className="absolute top-6 right-0 transform -translate-x-1/4 md:-translate-x-1/2 -translate-y-[23px]">
           <Image src={money5} alt="Money" width={80} height={80} />
         </div>
       </div>
