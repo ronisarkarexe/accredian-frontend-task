@@ -1,11 +1,17 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import referImg from "../assert/18512590-ai (1) 1.png";
 import icon1 from "../assert/Layer_2.png";
 import icon2 from "../assert/Layer_10.png";
 import icon3 from "../assert/Group 22036.png";
+import Modal from "./model";
 
 const ReferComponent = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="bg-blue-100">
       <div className="relative h-600 bg-cover bg-center  my-10 py-8">
@@ -55,10 +61,14 @@ const ReferComponent = () => {
         </div>
       </div>
       <div className="flex items-center justify-center pb-3">
-        <button className="px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700">
+        <button
+          onClick={openModal}
+          className="px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700"
+        >
           Refer Now
         </button>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

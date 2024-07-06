@@ -3,6 +3,7 @@ import { ChevronDown, ChevronRight, GraduationCap } from "lucide-react";
 import React, { useState } from "react";
 import group from "../assert/Group.png";
 import Image from "next/image";
+import Modal from "./model";
 
 const programs = [
   {
@@ -71,6 +72,10 @@ const allEvents = [
 
 const ReferralComponent = () => {
   const [eventActive, setEventActive] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="my-10">
       <h1 className="text-center font-bold">
@@ -156,10 +161,14 @@ const ReferralComponent = () => {
       </div>
 
       <div className="flex items-center justify-center">
-        <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700">
+        <button
+          onClick={openModal}
+          className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700"
+        >
           Refer Now
         </button>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

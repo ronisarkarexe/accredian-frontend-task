@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import mobile from "../assert/Anniversary (7) 1.png";
 import Image from "next/image";
 import money1 from "../assert/Anniversary (8) 1.png";
@@ -6,8 +7,14 @@ import money2 from "../assert/Anniversary (8) 2.png";
 import money3 from "../assert/Anniversary (8) 3.png";
 import money4 from "../assert/Anniversary (8) 4.png";
 import money5 from "../assert/Anniversary (8) 5.png";
+import Modal from "./model";
 
 const HeroComponent = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div>
       <div className="flex items-center justify-center mt-5">
@@ -30,7 +37,10 @@ const HeroComponent = () => {
             <span className="font-bold text-blue-600">Rs. 15,000</span>
           </p>
 
-          <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700">
+          <button
+            onClick={openModal}
+            className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-700"
+          >
             Refer Now
           </button>
         </div>
@@ -59,6 +69,8 @@ const HeroComponent = () => {
           <Image src={money5} alt="Money" width={80} height={80} />
         </div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

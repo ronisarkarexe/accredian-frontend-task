@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assert/logo.png.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeaderComponent = () => {
   return (
@@ -8,15 +9,23 @@ const HeaderComponent = () => {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
-            <a className="block text-teal-600" href="#">
-              <span className="sr-only">Home</span>
-            </a>
-            <Image src={logo} width={100} height={100} alt="logo" />
+            <Link href={"/"}>
+              <Image src={logo} width={100} height={100} alt="logo" />
+            </Link>
           </div>
 
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
+                <li>
+                  <Link href={"/referred-list"}>
+                    <span className="text-gray-800 transition hover:text-gray-500/75">
+                      {" "}
+                      Referred List{" "}
+                    </span>
+                  </Link>
+                </li>
+
                 <li>
                   <a
                     className="text-gray-800 transition hover:text-gray-500/75"
